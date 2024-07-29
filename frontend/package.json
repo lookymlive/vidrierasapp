@@ -2,12 +2,12 @@
   "name": "frontend",
   "version": "1.0.0",
   "private": true,
-  "description": "Vamos a configurar y desarrollar la aplicación \"vidrierasapp\" paso a paso utilizando Visual Studio Code (VS Code) y el stack MERN. Seguiré una metodología ordenada y te guiaré en cada parte del desarrollo.",
+  "description": "Vamos a configurar y desarrollar la aplicación \"vidrierasapp\" (VS Code) y el stack MERN. ",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "webpack serve --open --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --open --mode development"
+   
   },
   "keywords": [],
   "author": "",
