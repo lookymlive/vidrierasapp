@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+Vamos a configurar y desarrollar la aplicación "vidrierasapp" paso a paso utilizando Visual Studio Code (VS Code) y el stack MERN. Seguiré una metodología ordenada y te guiaré en cada parte del desarrollo.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Paso 1: Configuración del Proyecto
+1. Crear la Carpeta del Proyecto
+Abre Visual Studio Code.
 
-## Available Scripts
+Abre la terminal en VS Code presionando Ctrl + ` o navegando a Ver > Terminal.
 
-In the project directory, you can run:
+Crea la carpeta del proyecto y navega dentro de ella. Puedes hacerlo desde la terminal:
 
-### `npm start`
+mkdir vidrierasapp
+cd vidrierasapp
+2. Configuración del Backend
+Crea la carpeta del backend:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+mkdir backend
+cd backend
+Inicializa un nuevo proyecto de Node.js:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+npm init -y
+Esto creará un archivo package.json con la configuración predeterminada.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Instala las dependencias necesarias:
 
-### `npm run build`
+npm install express mongoose dotenv bcryptjs jsonwebtoken
+Crea la estructura de carpetas del backend:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+mkdir models 
+mkdir routes 
+mkdir controllers
+mkdir middleware
+mkdir config
+mkdir server 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Configuración del Frontend
+Regresa al directorio raíz del proyecto:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd ..
+Crea la carpeta del frontend utilizando Create React App:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npx create-react-app frontend
+Navega al directorio del frontend y abre VS Code desde allí:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd frontend
+code .
+Paso 2: Desarrollo del Backend
+Ahora, vamos a trabajar en el backend utilizando Express y MongoDB.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Configura el Servidor Express
+Crea el archivo server.js en el directorio backend:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+vidrierasapp/
+  backend/
+    server.js
+2. Abre server.js y añade el siguiente código:
