@@ -16,7 +16,7 @@ const app = express();
 //Esto asegura que CORS sea verificado antes de procesar las solicitudes.
 
 app.use(cors({
-  origin: 'http://localhost:8080', // Cambia esto al origen de tu frontend
+  origin: 'http://localhost:8081', // Cambia esto al origen de tu frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'] // Encabezados permitidos
 }));
@@ -28,7 +28,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/videos', videoRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 // Conectar a MongoDB usando Mongoose
 mongoose.connect(process.env.MONGODB_URI, {
