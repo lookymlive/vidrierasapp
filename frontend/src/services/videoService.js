@@ -1,14 +1,17 @@
 const API_URL = 'http://localhost:5000/api/videos';
 
+// videoService.js
 export const getVideos = async () => {
   try {
-    const response = await fetch(API_URL);
+    const response = await fetch(API_URL); // Replace with your API endpoint'https://api.example.com/videos'
     const data = await response.json();
-    return data;
+    return data; // Ensure this is an array
   } catch (error) {
-    console.error('Error al obtener videos:', error);
+    console.error("Failed to fetch videos:", error);
+    return [];
   }
 };
+
 
 export const uploadVideo = async (videoData) => {
   try {

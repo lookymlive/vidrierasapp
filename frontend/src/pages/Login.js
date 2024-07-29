@@ -11,7 +11,8 @@ const Login = () => {
     setEmail('');
     setPassword('');
   };
-
+  console.log(email, password);
+  
   return (
     <div>
       <h2>Iniciar Sesión</h2>
