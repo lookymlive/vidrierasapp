@@ -1,8 +1,6 @@
+import  {Home,  Register, Login } from './pages/index.js';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.js';
-import Register from './pages/Register.js';
-import Login from './pages/Login.js';
 import VideoUpload from './components/VideoUpload.js';
 
 const App = () => {
